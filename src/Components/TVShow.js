@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tvShow = () => {
+const TVShow = (props) => {
   return (
     <div>
       <br/>
@@ -9,4 +9,4 @@ const tvShow = () => {
   );
 }
 
-export default tvShow;
+export default TVShow;

@@ -24,12 +24,12 @@ class App extends Component {
     window.scrollTo(0, 0)
   }
 
-  handleSearch (e){
+  handleSearch = (e) => {
     this.setState({ searchTerm: e.target.value.toLowerCase() })
   }
 
   handleFilter = (e) => {
-    e.target.value === "No Filter" ? this.setState({ filterRating:"" }) : this.setState({ filterRating: e.target.value})
+    e.target.value === "No Filter" ? this.setState({ filterByRating:"" }) : this.setState({ filterByRating: e.target.value})
   }
 
   selectShow = (show) => {
@@ -50,9 +50,13 @@ class App extends Component {
     }
   }
 
+  handleScroll = (e) => {
+    console.log(e.target.scrollHeight);
+  }
+
   render (){
     return (
-      <div>
+      <div onScroll={this.handleScroll}>
         <Nav handleFilter={this.handleFilter} handleSearch={this.handleSearch} searchTerm={this.state.searchTerm}/>
         <Grid celled>
           <Grid.Column width={5}>

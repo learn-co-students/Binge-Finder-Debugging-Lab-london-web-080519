@@ -1,4 +1,5 @@
 import React from 'react';
+import { EBADF } from 'constants';
 
 const Filter = (props) => {
   return (
@@ -19,3 +20,5 @@ const Filter = (props) => {
     </div>
   )
 }
+
+export default Filter;
